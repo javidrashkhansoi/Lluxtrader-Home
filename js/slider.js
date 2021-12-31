@@ -16,19 +16,30 @@ $(document).ready(function () {
 	$(".popular__slider").slick({
 		arrows: true,
 		slidesToShow: 3,
-		// speed: 1000,
 		autoplay: true,
 		autoplaySpeed: 5000,
 		pauseOnFocus: true,
 		pauseOnHover: true,
 		pauseOnDotsHover: true,
-		// infinite: true,
 		draggable: true,
 		swipe: true,
 		touchMove: true,
 		waitForAnimate: true,
-		// centerMode: true,
-		// variableWidth: true,
 		appendArrows: $(".popular__buttons"),
+		responsive: [
+			{
+				breakpoint: 900,
+				settings: {
+					slidesToShow: 2,
+					
+				},
+			},
+			{
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 1,
+				},
+			},
+		],
 	});
 })
