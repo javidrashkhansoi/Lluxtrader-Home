@@ -15,7 +15,7 @@ $(document).ready(function () {
 	});
 	$(".popular__slider").slick({
 		arrows: true,
-		slidesToShow: 3,
+		slidesToShow: 1,
 		autoplay: true,
 		autoplaySpeed: 5000,
 		pauseOnFocus: true,
@@ -26,18 +26,19 @@ $(document).ready(function () {
 		touchMove: true,
 		waitForAnimate: true,
 		appendArrows: $(".popular__buttons"),
+		mobileFirst: true,
 		responsive: [
 			{
 				breakpoint: 900,
 				settings: {
-					slidesToShow: 2,
+					slidesToShow: 3,
 					
 				},
 			},
 			{
 				breakpoint: 576,
 				settings: {
-					slidesToShow: 1,
+					slidesToShow: 2,
 				},
 			},
 		],
