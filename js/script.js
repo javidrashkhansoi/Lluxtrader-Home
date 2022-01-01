@@ -11,9 +11,15 @@ setInterval(() => {
 	if (isMobile.any()) {
 		document.querySelector(".header__profile").classList.add("touch");
 		document.querySelector(".header__profile").classList.remove("mouse");
+
+		document.querySelector(".categories").classList.add("touch");
+		document.querySelector(".categories").classList.remove("mouse");
 	} else {
 		document.querySelector(".header__profile").classList.add("mouse");
 		document.querySelector(".header__profile").classList.remove("touch");
+
+		document.querySelector(".categories").classList.add("mouse");
+		document.querySelector(".categories").classList.remove("touch");
 	}
 }, 100);
 
