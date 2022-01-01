@@ -1569,4 +1569,83 @@ body.block {
           transform: rotate(45deg);
   margin: 0 14px;
 }
+
+.categories__decors {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (max-width: 979px) {
+  .categories__decors {
+    display: none;
+  }
+}
+
+.about {
+  margin: 0 0 77px;
+}
+
+@media (max-width: 768px) {
+  .about {
+    margin: 0 0 30px;
+  }
+}
+
+.about__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -23.5px;
+}
+
+@media (max-width: 576px) {
+  .about__row {
+    margin: 0 -15px;
+  }
+}
+
+.about__column {
+  padding: 0 23.5px;
+}
+
+@media (max-width: 576px) {
+  .about__column {
+    padding: 0 15px;
+  }
+}
+
+.about__decor {
+  background: url("../img/about/01.svg") top/contain repeat-y;
+  width: 86px;
+  height: 100%;
+}
+
+@media (max-width: 425px) {
+  .about__decor {
+    width: 50px;
+  }
+}
+
+.about__text {
+  color: #333333;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.about__text p {
+  margin: 0 0 32px;
+}
+
+@media (max-width: 576px) {
+  .about__text p {
+    margin: 0 0 20px;
+  }
+}
+
+.about__text p:last-child {
+  margin: 0;
+}
 /*# sourceMappingURL=scyle.css.map */
