@@ -42,3 +42,21 @@ document.querySelector(".header__burger").addEventListener("click", () => {
 	document.querySelector(".header__navigation").classList.toggle("active");
 	document.body.classList.toggle("block");
 });
+
+let quotesButton = document.querySelector(".quotes__button-button");
+quotesButton.addEventListener("click", function randomQuote() {
+	let quotes = document.querySelectorAll(".quotes__row");
+	let quotesLength = quotes.length;
+	let randomInteger = Math.floor(Math.random() * quotesLength);
+	if (!quotes[randomInteger].classList.contains("display-quote")) {
+		quotes.forEach(quote => {
+			quote.classList.remove("display-quote");
+		})
+		quotes[randomInteger].classList.add("display-quote");
+	} else {
+		quotes.forEach(quote => {
+			quote.classList.remove("display-quote");
+		})
+		quotes[randomInteger + 1 === quotesLength ? randomInteger - 1 : randomInteger + 1].classList.add("display-quote");
+	}
+});
