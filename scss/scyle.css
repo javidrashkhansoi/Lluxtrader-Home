@@ -1448,6 +1448,12 @@ body.block {
   margin: 0 0 132px;
 }
 
+@media (max-width: 768px) {
+  .categories {
+    margin: 0 0 30px;
+  }
+}
+
 .categories.mouse .categories__body {
   opacity: 0;
 }
@@ -1462,6 +1468,7 @@ body.block {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: -25px -50px;
+  position: relative;
 }
 
 .categories__column {
