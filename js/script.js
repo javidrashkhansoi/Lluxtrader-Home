@@ -60,3 +60,23 @@ quotesButton.addEventListener("click", function randomQuote() {
 		quotes[randomInteger + 1 === quotesLength ? randomInteger - 1 : randomInteger + 1].classList.add("display-quote");
 	}
 });
+
+let input = document.querySelector(".form__email>input");
+input.placeholder = "Ваш e-mail";
+input.addEventListener("focus", () => {
+	input.placeholder = "";
+});
+input.addEventListener("blur", () => {
+	if (!input.value) {
+		input.placeholder = "Ваш e-mail";
+	}
+});
+input.addEventListener("input", () => {
+	if (input.value) {
+		document.querySelector(".form__button").classList.add("focus");
+		document.querySelector(".form__button>button").removeAttribute("disabled");
+	} else {
+		document.querySelector(".form__button").classList.remove("focus");
+		document.querySelector(".form__button>button").setAttribute("disabled", "true");
+	}
+});
